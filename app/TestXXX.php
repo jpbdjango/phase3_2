@@ -9,7 +9,7 @@ class TestXXX extends Model
 
     // Fillable
     protected $fillable = [
-
+        'Test',
     ];
 
     // Relations
