@@ -169,6 +169,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Centaur\CentaurServiceProvider::class,
         Sven\ArtisanView\ArtisanViewServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         //
 
         /*
@@ -179,7 +180,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+      
     ],
 
     /*
