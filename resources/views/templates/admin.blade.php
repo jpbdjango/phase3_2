@@ -1,18 +1,26 @@
-{{-- Load Header --}} 
+
+@use(App\Http\Request)
+
+{{-- Load Header --}}
 @include('templates.partials.html.header')
-<?php use App\Http\Request; ?> {{-- Main div --}}
+
+{{-- Main div --}}
 <div class="ui container">
 	<div class="ui grid">
 		<div class="row">
-			<div class="four wide column blue">MENU</div>
-			<div class="twelve wide column">@yield('content')</div>
+			<div class="column">
+				@yield('page-header')
+			</div>
 		</div>
-		<div class="row red">
-			<div class="sixteen wide column center">Footer</div>
+		<div class="row">
+			<div class="four wide column">@yield('menu')</div>
+			<div class="twelve wide column">@yield('content')</div>
 		</div>
 	</div>
 </div>
-{{-- Load Js --}} 
+
+{{-- Load Js --}}
 @include('templates.partials.html.js') 
-{{-- Load Close Html --}} 
+
+{{-- Load Close Html --}}
 @include('templates.partials.html.closer')

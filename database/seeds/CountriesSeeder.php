@@ -14,7 +14,7 @@ class CountriesSeeder extends Seeder
     {
 
         DB::table('countries')->insert([
-            'code' => "BEL",
+            'code' => "be",
             'name' => "Belgique",
             'prefered' => true,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
@@ -22,7 +22,7 @@ class CountriesSeeder extends Seeder
         ]);
 
         DB::table('countries')->insert([
-            'code' => "FRA",
+            'code' => "fr",
             'name' => "France",
             'prefered' => true,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
@@ -30,7 +30,7 @@ class CountriesSeeder extends Seeder
         ]);
 
         DB::table('countries')->insert([
-            'code' => "LUX",
+            'code' => "lu",
             'name' => "Luxembourg",
             'prefered' => true,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),

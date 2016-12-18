@@ -8,6 +8,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Admin</title>
     <!-- Styles -->
+    <link rel="stylesheet" href="{{ URL::asset('css/semantic.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/flag.min.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/icon.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
 </head>
 

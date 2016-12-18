@@ -14,20 +14,14 @@ class __model__ extends Model
 
     // Relations
 
-    // Store in Session
-    public static function putInSession($id,$fields=null) {
+    // Getters
 
-        $model = __model__::find($id);
-
-        if($model) {
-            foreach ($fields as $field) {
-                Memsession::put('__tablename__',$field,$model->$field);
-            }
-            return true;
-        }
-
-        return "error";
-
+    // Static Functions
+    static public function getCount($field='id',$operator='!=',$value='0') {
+        return __model__::where($field,$operator,$value)->count();
     }
+
+
+    // Specifics Functions
 
 }

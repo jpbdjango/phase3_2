@@ -1,36 +1,19 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-
-/* Initial */
+/* Home */
 Route::get('/', function () {
-    return view('welcome');
+    return view('admin.index');
 });
 
-/* Bootstrap */
-Route::get('/bs', function () {
-    return view('bootstrap');
-});
+#
+# Load Web Routes
+#
+foreach (File::allFiles(base_path('routes/webRoutes')) as $partial) {
 
-/* Materialize */
-Route::get('mat', function () {
-    return view('materialize');
-});
+    require_once $partial->getPathName();
 
-/* semantic */
-Route::get('sem', function () {
-    return view('semantic');
-});
+}
 
 // Authorization
 Route::get('/login', ['as' => 'auth.login.form', 'uses' => 'Auth\SessionController@getLogin']);

@@ -11,7 +11,15 @@ class AppServiceProvider extends ServiceProvider {
      * @return void
      */
     public function boot() {
-        //
+
+        \Blade::directive('datetime', function ($expression) {
+            return "<?php echo ($expression)->format('m/d/Y H:i'); ?>";
+        });
+
+        \Blade::directive('use', function ($expression) {
+            return "<?php use $expression; ?>";
+        });
+
     }
 
     /**
